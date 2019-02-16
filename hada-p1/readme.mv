@@ -1,1 +1,29 @@
 ﻿Práctica 1a: Uso de git
+
+P1. ¿Qué crees que significa la opción -n del comando revert?
+
+Esta opción especifica que el commit de la orden revertida no se ejecute automáticamente.
+Es decir, si no hubieramos marcado esta opción, al revertir el borrado del archivo readme.txt
+el commit se habria hecho automáticamente, sin necesidad de hacerlo de manera manual.
+
+P2. ¿Qué cambios se han producido al ejecutar el comando reset?
+
+Se ha vuelto al estado del último commit realizado desechando las modificaciones realizadas.
+En este caso se ha desechazo el borrado del archivo. Se ha reseteado el estado del control de versiones
+al último commit realizado.
+
+
+P3. ¿Qué diferencias observas entre revert y reset?
+
+- Revert crea un nuevo commit y reset no.
+- Revert retorna a un commit anterior, desechando los cambios realizados y creando un nuevo commit.
+Además, durante el proceso, mantiene los commits más modernos respecto al commit al cual se retorna.
+Reset, al contrario, vuelve a un punto anterior dsechando los commits y cambios hasta dicho punto. Es decir,
+se trata de un reseteo.
+- Utilizar reset puede ser peejudicial si no se esta seguro de lo que se está haciendo.
+
+P4. ¿Qué diferencias observas entre merge y rebase?
+
+- El rebase unifica las ramas dejando un árbol lineal. El merge aun deja el gráfico de las ramas.
+- El merge a la hora de unificar realiza un commit de más. El rebase unifica sin necesidad de crear un nuevo commit.
+- El rebase unifica las ramas perdiendo el historial de commits, el merge no. Esto es importante a la hora de trabajar en grupo.
