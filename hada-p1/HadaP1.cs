@@ -33,5 +33,16 @@ namespace hada_p1
             if (m == 0) return 0;
             else return m * 60;
         }
+
+        /// <summary>
+        /// Este método convierte horas a minutos.
+        /// </summary>
+        /// <param name="h"></param>
+        /// <returns></returns>
+        public static double Hours2Minutes(double h)
+        {
+            if (h == 0) return 0;
+            else return h * 60;
+        }
     }
 }
